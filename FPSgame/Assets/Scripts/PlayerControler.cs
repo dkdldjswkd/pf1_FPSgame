@@ -12,14 +12,19 @@ public class PlayerControler : MonoBehaviour
     [SerializeField]
     private float RunSpeed;
     private float ApplySpeed;
+    [SerializeField]
+    private float JumpForce;
 
     //상태 변수
     private bool IsRun = false;
+    private bool IsGround = true;
+
+    //땅 착지 여부
+    private CapsuleCollider capsuleCollider;
 
     // 민감도 변수
     [SerializeField]
     private float LookSensitivity;
-
     //카메라 한계
     [SerializeField]
     private float cameraRotationLimit = 90;
@@ -33,6 +38,7 @@ public class PlayerControler : MonoBehaviour
 
     void Start()
     {
+        capsuleCollider = GetComponent<CapsuleCollider>();
         myRigid = GetComponent<Rigidbody>();
         ApplySpeed = WalkSpeed;
 
@@ -41,6 +47,8 @@ public class PlayerControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GroundCheck();
+        TryJump();
         TryRun();
         Move();
         CameraRotation();
@@ -99,6 +107,23 @@ public class PlayerControler : MonoBehaviour
         myRigid.MoveRotation(myRigid.rotation * Quaternion.Euler(_characterRotationY));
         Debug.Log(myRigid.rotation);
         Debug.Log(myRigid.rotation.eulerAngles);
+    }
+
+    private void GroundCheck()
+    {
+        IsGround = Physics.Raycast(transform.position, Vector3.down, capsuleCollider.bounds.extents.y + 0.1f);
+    }
+    private void TryJump()
+    {
+        if(Input.GetKeyDown(KeyCode.Space) && IsGround)
+        {
+            Jump();
+        }
+    }
+
+    private void Jump()
+    {
+        myRigid.velocity = transform.up * JumpForce;
     }
 
 
