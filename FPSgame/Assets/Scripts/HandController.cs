@@ -62,6 +62,7 @@ public class HandController : MonoBehaviour
         {
             if (CheckObject())
             {
+                isSwing = false;
                 // 충돌했음
                 Debug.Log(hitinfo.transform.name);
             }
@@ -71,9 +72,10 @@ public class HandController : MonoBehaviour
 
     private bool CheckObject()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out hitinfo, currentHand.range)){
+        if (Physics.Raycast(transform.position, transform.forward, out hitinfo, currentHand.range))
+        {
             return true;
         }
-        return true;
+        return false;
     }
 }
