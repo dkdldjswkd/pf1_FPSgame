@@ -733,6 +733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652689634204}
   - component: {fileID: 919132148956743975}
+  - component: {fileID: 919132148956743976}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -759,6 +760,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &919132148956743976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148956743974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424fe9b37ab982f4dac6bf62d3d721ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handName: "\uB9E8\uC190"
+  range: 2
+  damage: 1
+  workSpeed: 0
+  attackDelay: 1
+  attackDelayA: 0.5
+  attackDelayB: 0.1
+  anim: {fileID: 919132148956743975}
 --- !u!1 &1125796683996483931
 GameObject:
   m_ObjectHideFlags: 0
