@@ -1,0 +1,5 @@
+앉기 - 앉는 중 점프하면 해제, 앉는중 달리면 해제, 앉으면 속도가 저하됨
+걷기 - [Serialize Field]private float WalkSpeed; // 변수 이름
+달리기 - [Serialize Field]private float RunSpeed; // 쉬프트를 누르고 있으면 달림
+점프 - 몸의 중심부에서 월드좌표계 기준 -y방향으로 레이저를 쏘아 땅에 발을 딛고있는지 체크함 (bool 변수)
+공격 - 몸의 중심부에서 플레이어 기준 z방향으로 레이저를 쏘아 range범위 내의 적을 공격함, 공격 선딜/후딜이 있음
