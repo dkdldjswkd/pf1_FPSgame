@@ -18,8 +18,8 @@ public class StateController : MonoBehaviour
     private void Start()
     {
         State = 2;
-        ChildHand = transform.FindChild("Hand Holder").gameObject;
-        ChildGun = transform.FindChild("GunHolder").gameObject;
+        ChildHand = transform.Find("Hand Holder").gameObject;
+        ChildGun = transform.Find("GunHolder").gameObject;
 
         //처음 손에 들린게 총이라는 소리
         HandController.isActivate = false;
