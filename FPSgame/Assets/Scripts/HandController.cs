@@ -14,6 +14,8 @@ public class HandController : MonoBehaviour
     private bool isAttack = false;
     private bool isSwing = false;
 
+    public static bool isActivate = true;
+
     private RaycastHit hitinfo;
     void Start()
     {
@@ -23,7 +25,10 @@ public class HandController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TryAttack();
+        if (isActivate)
+        {
+            TryAttack();
+        }        
     }
 
     private void TryAttack()

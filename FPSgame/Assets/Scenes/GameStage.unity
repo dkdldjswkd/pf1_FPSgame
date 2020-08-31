@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &128064013
 Transform:
   m_ObjectHideFlags: 0
@@ -530,7 +530,7 @@ Animator:
   m_GameObject: {fileID: 475452396}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79e496835596bde48866a1b59326d645, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5513,6 +5513,7 @@ GameObject:
   - component: {fileID: 741801492}
   - component: {fileID: 741801493}
   - component: {fileID: 741801494}
+  - component: {fileID: 741801496}
   - component: {fileID: 741801495}
   m_Layer: 2
   m_Name: Holder
@@ -5544,7 +5545,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741801491}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4168c184bf6f0854ca80cb931987bcc9, type: 3}
   m_Name: 
@@ -5659,6 +5660,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &741801496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741801491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857093d02fe92eb4b86d985d120b1887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hand: {fileID: 128064012}
+  Gun: {fileID: 941280188}
 --- !u!1 &941280188
 GameObject:
   m_ObjectHideFlags: 0
@@ -10922,7 +10937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &919132148956743975
 Animator:
   serializedVersion: 3
