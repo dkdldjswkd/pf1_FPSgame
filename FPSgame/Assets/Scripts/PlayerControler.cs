@@ -157,7 +157,7 @@ public class PlayerControler : MonoBehaviour
         ApplySpeed = WalkSpeed;
     }
 
-    //캐릭터 y축 회전 (자식 객체인 카메라는 y축회전)
+    //카메라 x축 회전
     private void CameraRotation()
     {
         float _xRotation = Input.GetAxisRaw("Mouse Y");
@@ -168,7 +168,8 @@ public class PlayerControler : MonoBehaviour
         theCamera.transform.localEulerAngles = new Vector3(-currentCameraRotationX, 0, 0);
     }
 
-    //카메라 x축 회전
+
+    //캐릭터 y축 회전 (자식 객체인 카메라는 y축회전)
     private void CharactorRotation()
     {
         float _yRotation = Input.GetAxisRaw("Mouse X");
